@@ -10,7 +10,7 @@ class Scraper
       student_info = {
         name: student.css("h4.student-name").text, 
         location: student.css("p.student-location").text,
-        profile_url: "https://learn-co-curriculum.github.io/student-scraper-test-page/" + student.css("a").attribute("href")
+        profile_url: "https://learn-co-curriculum.github.io/student-scraper-test-page/" + student.css("a").attribute("href").value
       }
       students << student_info
     end
