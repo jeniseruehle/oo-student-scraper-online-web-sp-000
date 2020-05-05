@@ -4,6 +4,9 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
+    students = []
+    html = Nokogiri::HTML(open(index_url))
+    html.css(".student-card").collect do |student|
 
   end
 
